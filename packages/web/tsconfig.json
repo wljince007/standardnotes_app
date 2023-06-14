@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "skipLibCheck": true,
+    "sourceMap": true,
     "lib": ["ES2022"],
     "target": "ES2019",
     "module": "commonjs",
@@ -15,6 +16,7 @@
     "newLine": "lf",
     "declarationDir": "dist/@types",
     "baseUrl": ".",
+    "sourceMap": true,
     "jsx": "react-jsx",
     "typeRoots": ["./src/javascripts/Types/External", "../../node_modules/@types", "node_modules/@types"],
     "paths": {

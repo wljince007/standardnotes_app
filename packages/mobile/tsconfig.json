@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "sourceMap": true,
     "allowJs": true,
     "allowSyntheticDefaultImports": true,
     "baseUrl": "src",
@@ -14,6 +15,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
+    "sourceMap": true,
     "target": "esnext",
     "typeRoots": ["node_modules/@types", "./src/Types/*"]
   },

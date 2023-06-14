@@ -2,6 +2,7 @@
   "extends": "../../UILib.tsconfig.json",
   "compilerOptions": {
     "skipLibCheck": true,
+    "sourceMap": true,
     "rootDir": "./src",
     "outDir": "./dist",
   },

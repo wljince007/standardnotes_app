@@ -2,9 +2,11 @@
   "extends": "../../UILib.tsconfig.json",
   "compilerOptions": {
     "skipLibCheck": true,
+    "sourceMap": true,
     "rootDir": "./src",
     "outDir": "./dist",
     "allowSyntheticDefaultImports": true,
+    "sourceMap": true,
     "jsx": "react-jsx"
   },
   "include": ["src/**/*"],

@@ -1,6 +1,7 @@
 {
   "compilerOptions": {
     "skipLibCheck": true,
+    "sourceMap": true,
     "lib": [
       "ES2022"
     ],

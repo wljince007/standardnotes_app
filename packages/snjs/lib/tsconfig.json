@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "skipLibCheck": true,
+    "sourceMap": true,
     "allowJs": true,
     "alwaysStrict": true,
     "baseUrl": ".",
@@ -17,7 +19,6 @@
     "noImplicitThis": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "skipLibCheck": true,
     "outDir": "../dist/@types",
     "strict": true,
     "strictNullChecks": true,
