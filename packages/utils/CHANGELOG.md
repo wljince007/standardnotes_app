@@ -3,6 +3,10 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.16.6](https://github.com/wljince007/standardnotes_app/compare/@standardnotes/utils@1.16.5...@standardnotes/utils@1.16.6) (2023-06-15)
+
+**Note:** Version bump only for package @standardnotes/utils
+
 ## [1.16.5](https://github.com/standardnotes/app/compare/@standardnotes/utils@1.16.4...@standardnotes/utils@1.16.5) (2023-03-01)
 
 **Note:** Version bump only for package @standardnotes/utils
