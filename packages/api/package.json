@@ -38,11 +38,12 @@
   "dependencies": {
     "@standardnotes/common": "^1.46.6",
     "@standardnotes/domain-core": "^1.12.0",
-    "@standardnotes/encryption": "workspace:*",
-    "@standardnotes/models": "workspace:*",
-    "@standardnotes/responses": "workspace:*",
+    "@standardnotes/encryption": "1.21.39",
+    "@standardnotes/models": "1.45.6",
+    "@standardnotes/responses": "1.13.25",
     "@standardnotes/security": "^1.7.6",
-    "@standardnotes/utils": "workspace:*",
+    "@standardnotes/utils": "1.16.6",
     "reflect-metadata": "^0.1.13"
-  }
+  },
+  "gitHead": "4e01f3b5b91f6b3191eaa97ce87bdd8e33d21f25"
 }

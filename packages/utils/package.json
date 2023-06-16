@@ -43,5 +43,6 @@
     "jsdom": "^20.0.2",
     "ts-jest": "^29.0.3",
     "typescript": "*"
-  }
+  },
+  "gitHead": "4e01f3b5b91f6b3191eaa97ce87bdd8e33d21f25"
 }

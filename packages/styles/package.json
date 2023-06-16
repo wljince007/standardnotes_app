@@ -22,5 +22,6 @@
     "style-loader": "~3.3.1",
     "typescript": "*",
     "webpack": "*"
-  }
+  },
+  "gitHead": "4e01f3b5b91f6b3191eaa97ce87bdd8e33d21f25"
 }

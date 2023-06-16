@@ -36,10 +36,11 @@
   },
   "dependencies": {
     "@standardnotes/common": "^1.46.6",
-    "@standardnotes/models": "workspace:*",
-    "@standardnotes/responses": "workspace:*",
-    "@standardnotes/sncrypto-common": "workspace:*",
-    "@standardnotes/utils": "workspace:*",
+    "@standardnotes/models": "1.45.6",
+    "@standardnotes/responses": "1.13.25",
+    "@standardnotes/sncrypto-common": "1.13.4",
+    "@standardnotes/utils": "1.16.6",
     "reflect-metadata": "^0.1.13"
-  }
+  },
+  "gitHead": "4e01f3b5b91f6b3191eaa97ce87bdd8e33d21f25"
 }

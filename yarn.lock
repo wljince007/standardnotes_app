@@ -3914,17 +3914,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@standardnotes/api@workspace:*, @standardnotes/api@workspace:^, @standardnotes/api@workspace:packages/api":
+"@standardnotes/api@1.26.11, @standardnotes/api@workspace:^, @standardnotes/api@workspace:packages/api":
   version: 0.0.0-use.local
   resolution: "@standardnotes/api@workspace:packages/api"
   dependencies:
     "@standardnotes/common": ^1.46.6
     "@standardnotes/domain-core": ^1.12.0
-    "@standardnotes/encryption": "workspace:*"
-    "@standardnotes/models": "workspace:*"
-    "@standardnotes/responses": "workspace:*"
+    "@standardnotes/encryption": 1.21.39
+    "@standardnotes/models": 1.45.6
+    "@standardnotes/responses": 1.13.25
     "@standardnotes/security": ^1.7.6
-    "@standardnotes/utils": "workspace:*"
+    "@standardnotes/utils": 1.16.6
     "@types/jest": ^29.2.3
     "@types/lodash": ^4.14.189
     "@typescript-eslint/eslint-plugin": "*"
@@ -4065,7 +4065,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@standardnotes/desktop@workspace:*, @standardnotes/desktop@workspace:packages/desktop":
+"@standardnotes/desktop@3.106.55, @standardnotes/desktop@workspace:packages/desktop":
   version: 0.0.0-use.local
   resolution: "@standardnotes/desktop@workspace:packages/desktop"
   dependencies:
@@ -4159,16 +4159,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@standardnotes/encryption@workspace:*, @standardnotes/encryption@workspace:^, @standardnotes/encryption@workspace:packages/encryption":
+"@standardnotes/encryption@1.21.39, @standardnotes/encryption@workspace:*, @standardnotes/encryption@workspace:^, @standardnotes/encryption@workspace:packages/encryption":
   version: 0.0.0-use.local
   resolution: "@standardnotes/encryption@workspace:packages/encryption"
   dependencies:
     "@standardnotes/common": ^1.46.6
     "@standardnotes/config": 2.4.3
-    "@standardnotes/models": "workspace:*"
-    "@standardnotes/responses": "workspace:*"
-    "@standardnotes/sncrypto-common": "workspace:*"
-    "@standardnotes/utils": "workspace:*"
+    "@standardnotes/models": 1.45.6
+    "@standardnotes/responses": 1.13.25
+    "@standardnotes/sncrypto-common": 1.13.4
+    "@standardnotes/utils": 1.16.6
     "@types/jest": ^29.2.3
     "@types/node": ^18.11.9
     "@typescript-eslint/eslint-plugin": "*"
@@ -4182,19 +4182,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@standardnotes/features@npm:1.54.0":
-  version: 1.54.0
-  resolution: "@standardnotes/features@npm:1.54.0"
-  dependencies:
-    "@standardnotes/auth": ^3.19.4
-    "@standardnotes/common": ^1.43.0
-    "@standardnotes/security": ^1.2.0
-    reflect-metadata: ^0.1.13
-  checksum: 7426de5249c3f7c42e28b82263febeb89c6e4eb1833dc7761f9b641f8bcc8697e93649080b053dc18efcbc59442be891d51e80c94c145e72714dbb892cc05122
-  languageName: node
-  linkType: hard
-
-"@standardnotes/features@workspace:*, @standardnotes/features@workspace:^, @standardnotes/features@workspace:packages/features":
+"@standardnotes/features@1.59.6, @standardnotes/features@workspace:^, @standardnotes/features@workspace:packages/features":
   version: 0.0.0-use.local
   resolution: "@standardnotes/features@workspace:packages/features"
   dependencies:
@@ -4211,6 +4199,18 @@ __metadata:
     typescript: 4.9.3
   languageName: unknown
   linkType: soft
+
+"@standardnotes/features@npm:1.54.0":
+  version: 1.54.0
+  resolution: "@standardnotes/features@npm:1.54.0"
+  dependencies:
+    "@standardnotes/auth": ^3.19.4
+    "@standardnotes/common": ^1.43.0
+    "@standardnotes/security": ^1.2.0
+    reflect-metadata: ^0.1.13
+  checksum: 7426de5249c3f7c42e28b82263febeb89c6e4eb1833dc7761f9b641f8bcc8697e93649080b053dc18efcbc59442be891d51e80c94c145e72714dbb892cc05122
+  languageName: node
+  linkType: hard
 
 "@standardnotes/filepicker@workspace:*, @standardnotes/filepicker@workspace:^, @standardnotes/filepicker@workspace:packages/filepicker":
   version: 0.0.0-use.local
@@ -4232,7 +4232,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@standardnotes/files@workspace:*, @standardnotes/files@workspace:^, @standardnotes/files@workspace:packages/files":
+"@standardnotes/files@1.15.10, @standardnotes/files@workspace:*, @standardnotes/files@workspace:^, @standardnotes/files@workspace:packages/files":
   version: 0.0.0-use.local
   resolution: "@standardnotes/files@workspace:packages/files"
   dependencies:
@@ -4348,7 +4348,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@standardnotes/mobile@workspace:*, @standardnotes/mobile@workspace:packages/mobile":
+"@standardnotes/mobile@3.53.55, @standardnotes/mobile@workspace:packages/mobile":
   version: 0.0.0-use.local
   resolution: "@standardnotes/mobile@workspace:packages/mobile"
   dependencies:
@@ -4392,21 +4392,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@standardnotes/models@npm:1.34.3":
-  version: 1.34.3
-  resolution: "@standardnotes/models@npm:1.34.3"
-  checksum: 3f5314eb6ca59dd248217cc39e88a4293eeb91e0fb78267cb6f9226888f190f510bf9f77166ccb2e6bf84541749d701d1358823e06de2813724cea8c1f39d9f4
-  languageName: node
-  linkType: hard
-
-"@standardnotes/models@workspace:*, @standardnotes/models@workspace:^, @standardnotes/models@workspace:packages/models":
+"@standardnotes/models@1.45.6, @standardnotes/models@workspace:*, @standardnotes/models@workspace:^, @standardnotes/models@workspace:packages/models":
   version: 0.0.0-use.local
   resolution: "@standardnotes/models@workspace:packages/models"
   dependencies:
     "@standardnotes/common": ^1.46.6
-    "@standardnotes/features": "workspace:*"
-    "@standardnotes/responses": "workspace:*"
-    "@standardnotes/utils": "workspace:^"
+    "@standardnotes/features": 1.59.6
+    "@standardnotes/responses": 1.13.25
+    "@standardnotes/utils": ^1.16.6
     "@types/jest": ^29.2.3
     "@types/lodash": ^4.14.189
     "@typescript-eslint/eslint-plugin": "*"
@@ -4419,6 +4412,13 @@ __metadata:
     typescript: "*"
   languageName: unknown
   linkType: soft
+
+"@standardnotes/models@npm:1.34.3":
+  version: 1.34.3
+  resolution: "@standardnotes/models@npm:1.34.3"
+  checksum: 3f5314eb6ca59dd248217cc39e88a4293eeb91e0fb78267cb6f9226888f190f510bf9f77166ccb2e6bf84541749d701d1358823e06de2813724cea8c1f39d9f4
+  languageName: node
+  linkType: hard
 
 "@standardnotes/predicates@npm:1.6.5":
   version: 1.6.5
@@ -4438,20 +4438,20 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@standardnotes/releases@workspace:packages/releases"
   dependencies:
-    "@standardnotes/desktop": "workspace:*"
-    "@standardnotes/mobile": "workspace:*"
-    "@standardnotes/web": "workspace:*"
+    "@standardnotes/desktop": 3.106.55
+    "@standardnotes/mobile": 3.53.55
+    "@standardnotes/web": 3.161.2
     "@types/node": "*"
     typescript: "*"
   languageName: unknown
   linkType: soft
 
-"@standardnotes/responses@workspace:*, @standardnotes/responses@workspace:packages/responses":
+"@standardnotes/responses@1.13.25, @standardnotes/responses@workspace:*, @standardnotes/responses@workspace:packages/responses":
   version: 0.0.0-use.local
   resolution: "@standardnotes/responses@workspace:packages/responses"
   dependencies:
     "@standardnotes/common": ^1.46.6
-    "@standardnotes/features": "workspace:*"
+    "@standardnotes/features": 1.59.6
     "@standardnotes/security": ^1.7.6
     "@types/jest": ^29.2.3
     "@typescript-eslint/eslint-plugin": "*"
@@ -4483,7 +4483,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@standardnotes/services@workspace:*, @standardnotes/services@workspace:^, @standardnotes/services@workspace:packages/services":
+"@standardnotes/services@1.59.13, @standardnotes/services@workspace:^, @standardnotes/services@workspace:packages/services":
   version: 0.0.0-use.local
   resolution: "@standardnotes/services@workspace:packages/services"
   dependencies:
@@ -4527,16 +4527,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@standardnotes/sncrypto-common@npm:1.13.0":
-  version: 1.13.0
-  resolution: "@standardnotes/sncrypto-common@npm:1.13.0"
-  dependencies:
-    reflect-metadata: ^0.1.13
-  checksum: e58258f52546a3f0ce2d8f76d4be79a7d23e15dfd81e687ac66cd3fc00dc91e563556da2e600dbd2f270f659b3e1f3e4301dd6e6e7e6eb4faf51c4343fc65c96
-  languageName: node
-  linkType: hard
-
-"@standardnotes/sncrypto-common@workspace:*, @standardnotes/sncrypto-common@workspace:^, @standardnotes/sncrypto-common@workspace:packages/sncrypto-common":
+"@standardnotes/sncrypto-common@1.13.4, @standardnotes/sncrypto-common@workspace:*, @standardnotes/sncrypto-common@workspace:^, @standardnotes/sncrypto-common@workspace:packages/sncrypto-common":
   version: 0.0.0-use.local
   resolution: "@standardnotes/sncrypto-common@workspace:packages/sncrypto-common"
   dependencies:
@@ -4549,7 +4540,16 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@standardnotes/sncrypto-web@^1.6.1, @standardnotes/sncrypto-web@workspace:*, @standardnotes/sncrypto-web@workspace:packages/sncrypto-web":
+"@standardnotes/sncrypto-common@npm:1.13.0":
+  version: 1.13.0
+  resolution: "@standardnotes/sncrypto-common@npm:1.13.0"
+  dependencies:
+    reflect-metadata: ^0.1.13
+  checksum: e58258f52546a3f0ce2d8f76d4be79a7d23e15dfd81e687ac66cd3fc00dc91e563556da2e600dbd2f270f659b3e1f3e4301dd6e6e7e6eb4faf51c4343fc65c96
+  languageName: node
+  linkType: hard
+
+"@standardnotes/sncrypto-web@1.14.4, @standardnotes/sncrypto-web@^1.6.1, @standardnotes/sncrypto-web@workspace:*, @standardnotes/sncrypto-web@workspace:packages/sncrypto-web":
   version: 0.0.0-use.local
   resolution: "@standardnotes/sncrypto-web@workspace:packages/sncrypto-web"
   dependencies:
@@ -4586,21 +4586,21 @@ __metadata:
   dependencies:
     "@babel/core": "*"
     "@babel/preset-env": "*"
-    "@standardnotes/api": "workspace:*"
+    "@standardnotes/api": 1.26.11
     "@standardnotes/common": ^1.46.6
     "@standardnotes/domain-core": ^1.12.0
     "@standardnotes/domain-events": ^2.108.1
-    "@standardnotes/encryption": "workspace:*"
-    "@standardnotes/features": "workspace:*"
-    "@standardnotes/files": "workspace:*"
-    "@standardnotes/models": "workspace:*"
-    "@standardnotes/responses": "workspace:*"
+    "@standardnotes/encryption": 1.21.39
+    "@standardnotes/features": 1.59.6
+    "@standardnotes/files": 1.15.10
+    "@standardnotes/models": 1.45.6
+    "@standardnotes/responses": 1.13.25
     "@standardnotes/security": ^1.7.6
-    "@standardnotes/services": "workspace:*"
+    "@standardnotes/services": 1.59.13
     "@standardnotes/settings": ^1.20.0
-    "@standardnotes/sncrypto-common": "workspace:*"
-    "@standardnotes/sncrypto-web": "workspace:*"
-    "@standardnotes/utils": "workspace:*"
+    "@standardnotes/sncrypto-common": 1.13.4
+    "@standardnotes/sncrypto-web": 1.14.4
+    "@standardnotes/utils": 1.16.6
     "@types/crypto-js": ^4.1.1
     "@types/jest": ^29.2.3
     "@types/jsdom": ^20.0.1
@@ -4733,7 +4733,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@standardnotes/utils@workspace:*, @standardnotes/utils@workspace:^, @standardnotes/utils@workspace:packages/utils":
+"@standardnotes/utils@1.16.6, @standardnotes/utils@^1.16.6, @standardnotes/utils@workspace:*, @standardnotes/utils@workspace:^, @standardnotes/utils@workspace:packages/utils":
   version: 0.0.0-use.local
   resolution: "@standardnotes/utils@workspace:packages/utils"
   dependencies:
@@ -4756,7 +4756,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@standardnotes/web@workspace:*, @standardnotes/web@workspace:packages/web":
+"@standardnotes/web@3.161.2, @standardnotes/web@workspace:*, @standardnotes/web@workspace:packages/web":
   version: 0.0.0-use.local
   resolution: "@standardnotes/web@workspace:packages/web"
   dependencies:
