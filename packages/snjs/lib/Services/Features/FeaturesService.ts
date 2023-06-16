@@ -257,9 +257,7 @@ export class SNFeaturesService
   }
 
   public isExperimentalFeatureEnabled(featureId: FeaturesImports.FeatureIdentifier): boolean {
-    this.log('[isExperimentalFeatureEnabled] featureId:', featureId)
-    // return this.enabledExperimentalFeatures.includes(featureId)
-    return true
+    return this.enabledExperimentalFeatures.includes(featureId)
   }
 
   public async setOfflineFeaturesCode(code: string): Promise<SetOfflineFeaturesFunctionResponse> {
@@ -385,23 +383,21 @@ export class SNFeaturesService
   }
 
   hasFirstPartyOnlineSubscription(): boolean {
-    // return this.sessionManager.isSignedIntoFirstPartyServer() && this.onlineRolesIncludePaidSubscription()
-    return true
+    return this.sessionManager.isSignedIntoFirstPartyServer() && this.onlineRolesIncludePaidSubscription()
   }
 
   hasFirstPartySubscription(): boolean {
-    // if (this.hasFirstPartyOnlineSubscription()) {
-    //   return true
-    // }
+    if (this.hasFirstPartyOnlineSubscription()) {
+      return true
+    }
 
-    // const offlineRepo = this.getOfflineRepo()
-    // if (!offlineRepo || !offlineRepo.content.offlineFeaturesUrl) {
-    //   return false
-    // }
+    const offlineRepo = this.getOfflineRepo()
+    if (!offlineRepo || !offlineRepo.content.offlineFeaturesUrl) {
+      return false
+    }
 
-    // const hasFirstPartyOfflineSubscription = offlineRepo.content.offlineFeaturesUrl === PROD_OFFLINE_FEATURES_URL
-    // return hasFirstPartyOfflineSubscription || new URL(offlineRepo.content.offlineFeaturesUrl).hostname === 'localhost'
-    return true
+    const hasFirstPartyOfflineSubscription = offlineRepo.content.offlineFeaturesUrl === PROD_OFFLINE_FEATURES_URL
+    return hasFirstPartyOfflineSubscription || new URL(offlineRepo.content.offlineFeaturesUrl).hostname === 'localhost'
   }
 
   async updateOnlineRoles(roles: string[]): Promise<{
@@ -561,72 +557,67 @@ export class SNFeaturesService
   }
 
   public isFreeFeature(featureId: FeaturesImports.FeatureIdentifier) {
-    // return [FeatureIdentifier.DarkTheme].includes(featureId)
-    this.log('[isFreeFeature] featureId:', featureId)
-    return true
+    return [FeatureIdentifier.DarkTheme].includes(featureId)
   }
 
   public getFeatureStatus(featureId: FeaturesImports.FeatureIdentifier): FeatureStatus {
-    
-    // if (this.isFreeFeature(featureId)) {
-    //   return FeatureStatus.Entitled
-    // }
+    if (this.isFreeFeature(featureId)) {
+      return FeatureStatus.Entitled
+    }
 
-    // const nativeFeature = FeaturesImports.FindNativeFeature(featureId)
+    const nativeFeature = FeaturesImports.FindNativeFeature(featureId)
 
-    // const isDeprecated = this.isFeatureDeprecated(featureId)
-    // if (isDeprecated) {
-    //   if (this.hasPaidAnyPartyOnlineOrOfflineSubscription()) {
-    //     return FeatureStatus.Entitled
-    //   } else {
-    //     return FeatureStatus.NoUserSubscription
-    //   }
-    // }
+    const isDeprecated = this.isFeatureDeprecated(featureId)
+    if (isDeprecated) {
+      if (this.hasPaidAnyPartyOnlineOrOfflineSubscription()) {
+        return FeatureStatus.Entitled
+      } else {
+        return FeatureStatus.NoUserSubscription
+      }
+    }
 
-    // const isThirdParty = nativeFeature == undefined
-    // if (isThirdParty) {
-    //   const component = this.itemManager
-    //     .getDisplayableComponents()
-    //     .find((candidate) => candidate.identifier === featureId)
-    //   if (!component) {
-    //     return FeatureStatus.NoUserSubscription
-    //   }
-    //   if (component.isExpired) {
-    //     return FeatureStatus.InCurrentPlanButExpired
-    //   }
-    //   return FeatureStatus.Entitled
-    // }
+    const isThirdParty = nativeFeature == undefined
+    if (isThirdParty) {
+      const component = this.itemManager
+        .getDisplayableComponents()
+        .find((candidate) => candidate.identifier === featureId)
+      if (!component) {
+        return FeatureStatus.NoUserSubscription
+      }
+      if (component.isExpired) {
+        return FeatureStatus.InCurrentPlanButExpired
+      }
+      return FeatureStatus.Entitled
+    }
 
-    // if (this.hasPaidAnyPartyOnlineOrOfflineSubscription()) {
-    //   if (!this.completedSuccessfulFeaturesRetrieval) {
-    //     const hasCachedFeatures = this.features.length > 0
-    //     const temporarilyAllowUntilServerUpdates = !hasCachedFeatures
-    //     if (temporarilyAllowUntilServerUpdates) {
-    //       return FeatureStatus.Entitled
-    //     }
-    //   }
-    // } else {
-    //   return FeatureStatus.NoUserSubscription
-    // }
+    if (this.hasPaidAnyPartyOnlineOrOfflineSubscription()) {
+      if (!this.completedSuccessfulFeaturesRetrieval) {
+        const hasCachedFeatures = this.features.length > 0
+        const temporarilyAllowUntilServerUpdates = !hasCachedFeatures
+        if (temporarilyAllowUntilServerUpdates) {
+          return FeatureStatus.Entitled
+        }
+      }
+    } else {
+      return FeatureStatus.NoUserSubscription
+    }
 
-    // if (nativeFeature) {
-    //   if (!this.hasFirstPartySubscription()) {
-    //     return FeatureStatus.NotInCurrentPlan
-    //   }
+    if (nativeFeature) {
+      if (!this.hasFirstPartySubscription()) {
+        return FeatureStatus.NotInCurrentPlan
+      }
 
-    //   const roles = this.rolesToUseForFeatureCheck()
-    //   if (nativeFeature.availableInRoles) {
-    //     const hasRole = roles.some((role) => {
-    //       return nativeFeature.availableInRoles?.includes(role)
-    //     })
-    //     if (!hasRole) {
-    //       return FeatureStatus.NotInCurrentPlan
-    //     }
-    //   }
-    // }
+      const roles = this.rolesToUseForFeatureCheck()
+      if (nativeFeature.availableInRoles) {
+        const hasRole = roles.some((role) => {
+          return nativeFeature.availableInRoles?.includes(role)
+        })
+        if (!hasRole) {
+          return FeatureStatus.NotInCurrentPlan
+        }
+      }
+    }
 
-    // return FeatureStatus.Entitled
-    this.log('[getFeatureStatus] featureId:', featureId)
     return FeatureStatus.Entitled
   }
 

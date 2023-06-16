@@ -13,8 +13,8 @@ type Props = {
 const UpgradeNow = ({ application, featuresController, subscriptionContoller }: Props) => {
   const shouldShowCTA = !featuresController.hasFolders
   const hasAccount = subscriptionContoller.hasAccount
-  // const hasAccessToFeatures = subscriptionContoller.hasFirstPartySubscription
-  const hasAccessToFeatures = true
+  const hasAccessToFeatures = subscriptionContoller.hasFirstPartySubscription
+  // const hasAccessToFeatures = true
   
 
   const onClick = useCallback(() => {
